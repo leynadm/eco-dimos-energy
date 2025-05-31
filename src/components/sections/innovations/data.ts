@@ -1,29 +1,36 @@
-import imgGrid from "./assets/inno-grid.webp";
-import imgSolar from "./assets/inno-panel.webp";
-import imgWind from "./assets/inno-wind.webp";
+import casaVerde01 from "./assets/casa-verde-01.webp";
+import casaVerde02 from "./assets/casa-verde-02.webp";
+import casaVerde03 from "./assets/casa-verde-03.webp";
+import casaVerde04 from "./assets/casa-verde-04.webp";
 
 export const innovationsSection = {
-  title: "Latest Innovations",
-  subheading1_1: "Discover Our Cutting-edge",
-  subheading1_2: " Green Energy Technologies",
+  title: "Alătură-te Programului Național de Finanțare",
+  subheading1_1: "Programul Casa Verde Fotovoltaice 2024 - ",
+  subheading1_2: " până la 20.000 lei pentru sistemul tău!",
   innovations: [
     {
-      title: "Smart Grid Integration",
+      title: "Pasul 1: Verificarea eligibilității",
       description:
-        "Revolutionize energy distribution with our smart grid technology, optimizing efficiency, minimizing wastage, and adapting to demand fluctuations. Stay connected with innovative solutions for a sustainable, cost-effective energy ecosystem. Embrace the future with our cutting-edge smart grid integration, enhancing reliability and paving the way for efficiency and sustainability.",
-      visual: imgGrid,
+        "Primul pas este să ne asigurăm că îndeplinești condițiile impuse de program. Trebuie să fii proprietar al imobilului, cu acte la zi și fără datorii la bugetul de stat sau local.",
+      visual: casaVerde01,
     },
     {
-      title: "Advanced Solar Panel Design",
+      title: "Pasul 2: Pregătirea dosarului de înscriere",
       description:
-        "Boost solar efficiency with our state-of-the-art solar panel designs. Our innovative technologies capture more sunlight, ensuring maximum energy production for your home or business. Experience enhanced sustainability and increased energy output with our advanced solar solutions.",
-      visual: imgSolar,
+        "Ne ocupăm de toate documentele necesare - de la extrasul de carte funciară și certificatele fiscale, până la declarațiile semnate. Te ghidăm pas cu pas ca dosarul tău să fie complet și valid.",
+      visual: casaVerde02,
     },
     {
-      title: "Next-gen Wind Turbines",
+      title: "Pasul 3: Depunerea cererii și obținerea aprobării",
       description:
-        "Transform your wind energy experience with our next-generation wind turbines. Our sleek design, enhanced efficiency, and minimal environmental impact underscore our commitment to innovation. Elevate your sustainable energy journey with cutting-edge wind solutions that prioritize both performance and environmental responsibility.",
-      visual: imgWind,
+        "Odată ce dosarul este gata, îl încărcăm pe platforma AFM și urmărim statusul în timp real. Rămânem alături de tine până când cererea este aprobată și poți începe proiectul.",
+      visual: casaVerde03,
+    },
+        {
+      title: "Pasul 4: Instalarea sistemului și racordarea la rețea",
+      description:
+        "Echipa noastră montează sistemul fotovoltaic și se ocupă de toate etapele tehnice: testare, punere în funcțiune, obținerea certificatului de racordare. La final, devii prosumator și începi să economisești.",
+      visual: casaVerde04,
     },
   ],
   visual: "innovations-section-image.jpg",

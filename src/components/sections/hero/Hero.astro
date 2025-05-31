@@ -8,14 +8,14 @@ import Title from "../../shared/Title.astro";
 import LazyImage from "../../shared/LazyImage.astro";
 
 const heroSection = {
-  headline1: "Powering",
-  headline2: "Tomorrow,",
-  headline3: "Sustainably",
-  headline4: "Today!",
-  subheading1: "Join us in the green energy revolution",
-  subheading2: "and be part of a sustainable future",
-  subheading3: "for generations to come.",
-  buttonText: "Get Powered Today!",
+  headline1: "Lasă",
+  headline2: "soarele",
+  headline3: "să iți platească",
+  headline4: "factura!",
+  subheading1: "Profită de ediția a 4-a",
+  subheading2: "Casa Verde Fotovoltaice",
+  subheading3: "și redu costurile cu energia până la 0 lei!",
+  buttonText: "Verifică-mi eligibilitatea",
   backgroundImage: "hero-background-image.jpg",
 };
 
@@ -27,7 +27,7 @@ const { className = "" } = Astro.props;
 ---
 
 <section class=`relative  ${className} w-full h-[80vh]` id="hero">
-  <div class="w-full h-[80vh] pt-[100px]">
+  <div class="w-full  pt-[100px]">
     <div
       class="w-full h-full grid grid-cols-1 md:grid-cols-2 justify-end bg-base-100 dark:bg-base-dark-900"
     >
@@ -43,7 +43,7 @@ const { className = "" } = Astro.props;
         <SubTitle className=" mt-10 leading-9 italic">
           {heroSection.subheading1}
           <br />
-          {heroSection.subheading2}<br />
+          <span class=" font-semibold">{heroSection.subheading2}</span><br />
           {heroSection.subheading3}
         </SubTitle>
         <div class="pt-10">

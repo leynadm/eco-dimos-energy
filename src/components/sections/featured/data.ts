@@ -3,29 +3,29 @@ import img2 from "./assets/wind-person.png";
 import img3 from "./assets/amazonas2.png";
 
 export const projectsSection = {
-  title: "Featured Projects",
-  subheading1_1: "Explore Our Successful ",
-  subheading1_2: "Green Energy Endeavors",
+  title: "Blogul Nostru",
+  subheading1_1: "Sfaturi, noutăți și articole ",
+  subheading1_2: "din lumea energiei verzi",
   projects: [
     {
-      title: "Solar-Powered Community",
+      title: "Ce înseamnă să devii prosumator în România?",
       description:
-        "Empowering a community with sustainable solar energy solutions. Learn how [Company Name] brought clean and affordable electricity to homes, schools, and businesses.",
-      location: "Los Angeles, California, USA",
+        "Află ce presupune să devii prosumator, ce drepturi ai și cum funcționează relația cu distribuitorul de energie electrică. Un ghid simplu pentru cei care își instalează panouri fotovoltaice prin Casa Verde.",
+      location: "Orăștie, Hunedoara",
       visual: img1,
     },
     {
-      title: "Wind Farm Innovation",
+      title: "Cât economisești cu un sistem fotovoltaic pentru o gospodărie medie?",
       description:
-        "Revolutionizing wind energy with our innovative wind farm. Discover how [Company Name] is harnessing the power of the wind to create a greener and more sustainable future.",
-      location: "Scottish Highlands, United Kingdom",
+        "Am analizat cazul unei case obișnuite de la țară: consum anual, facturi înainte și după instalare, durată de amortizare. Plus: ce tip de panouri am folosit și de ce.",
+      location: "Râșca, Cluj",
       visual: img2,
     },
     {
-      title: "Hydropower Plant Success",
+      title: "5 greșeli frecvente în pregătirea dosarului pentru Casa Verde",
       description:
-        "A journey into our hydropower success story. Explore how [Company Name] transforms the energy of flowing water into a reliable and eco-friendly power source.",
-      location: "Amazon Rainforest, South America",
+        "Fiecare an aduce sute de dosare respinse din cauza unor mici neatenții. Îți explicăm ce trebuie să verifici înainte de înscriere și cum te putem ajuta să eviți blocajele.",
+      location: "Deva, Hunedoara",
       visual: img3,
     },
   ],

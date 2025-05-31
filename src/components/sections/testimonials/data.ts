@@ -3,30 +3,30 @@ import img2 from "./assets/person2.png";
 import img3 from "./assets/person3.png";
 
 export const testimonialsSection = {
-  title: "What Our Customers Say",
-  subheading1_1: "Hear from Those",
-  subheading1_2: " Who Have Embraced Sustainable Living",
+  title: "Ce Spun Clienții Noștri",
+  subheading1_1: "Păreri de la cei care",
+  subheading1_2: " au făcut pasul spre un viitor sustenabil",
   testimonials: [
     {
-      name: "Emily Johnson",
+      name: "Maria Mureșan",
       visual: img1,
-      occupation: "Homeowner",
+      occupation: "Pensionară",
       quote:
-        "Switching to [Company Name] was the best decision I made. Our home is now powered by clean energy, and I feel great knowing I'm contributing to a healthier planet.",
+        "Trăiesc la țară și nu mă pricep la acte, dar echipa lor m-a ajutat cu tot, de la hârtii până la instalare. Panourile funcționează perfect și chiar am început să trimit energie în rețea. Sunt foarte mulțumită!",
     },
     {
-      name: "Carlos Rodriguez",
+      name: "Gheorghe Ilie",
       visual: img2,
-      occupation: "Business Owner",
+      occupation: "Mecanic auto",
       quote:
-        "As a business owner, sustainability is crucial. [Company Name] provided us with a seamless transition to green energy, and we've seen a positive impact on both the environment and our operating costs.",
+        "Aveam atelierul lângă casă și factura de curent era mare. Cu sistemul fotovoltaic montat de Eco Dimos plătesc mult mai puțin. A fost totul clar, de la primul telefon până la racordare.”",
     },
     {
-      name: "Sophie Chen",
+      name: "Ion Dobre",
       visual: img3,
-      occupation: "Environmental Advocate",
+      occupation: "Fermier",
       quote:
-        "I'm passionate about the environment, and [Company Name] aligns perfectly with my values. Their commitment to renewable energy and reducing carbon footprint is commendable.",
+        "Am aplicat pentru Casa Verde cu ajutorul celor de la Eco Dimos și totul a mers fără complicații. Mi-au pregătit dosarul, au montat panourile și acum nu mai plătesc curentul pentru fermă. O echipă serioasă și punctuală.”",
     },
   ],
   visual: "customer-testimonials-image.jpg",

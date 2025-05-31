@@ -1,19 +1,19 @@
 import img from "./assets/green-hands.png";
 
 export const environmentalImpactSection = {
-  title: "Environmental Impact",
-  subheading1_1: "Choosing [Company Name] for a",
-  subheading1_2: " Greener Tomorrow",
+  title: "Alătură-te altor 250+ de clienți fericiți",
+  subheading1_1: "Economisești lună de lună ",
+  subheading1_2: " și contribui la un viitor mai curat",
   description:
-    "At [Company Name], we are committed to making a positive impact on the environment. By choosing our sustainable energy solutions, you contribute to:",
+    "Trecerea la energie solară reprezintă o investiție inteligentă în confortul și bugetul tău. Cu ajutorul sistemelor fotovoltaice instalate de Eco Dimos Energy, beneficiezi de:",
   impactPoints: [
-    "Reducing Carbon Emissions",
-    "Conserving Natural Resources",
-    "Preserving Biodiversity",
-    "Mitigating Climate Change",
-    "Promoting a Cleaner and Healthier Planet",
+    "Facturi semnificativ mai mici la energie",
+    "Scapă de scumpirile curentului electric",
+    "Valoare crescută a locuinței tale",
+    "Acces la finanțare nerambursabilă",
+    "Un stil de viață mai sustenabil",
   ],
   visual: img,
   callToAction: "Join Us in Building a Sustainable Future",
-  button: "Learn More",
+  button: "Află mai multe",
 };

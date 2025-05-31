@@ -8,49 +8,49 @@ import img5 from "./assets/smart-grid.png";
 import img6 from "./assets/green.png";
 
 export const servicesSectionData = {
-  title: "Our Sustainable Energy Solutions",
+  title: "Serviciile Noastre",
   subheading: {
-    text1_1: "Experience a Revolution in Energy Solutions - ",
-    text1_2: "Embrace Innovation, Embrace Sustainability.",
+    text1_1: "Peste 10 ani de inovație în",
+    text1_2: "energie regenerabilă pentru clienți mulțumiți.",
     text2:
-      "We're here to Empower Your Life and Spaces with Clean, Renewable Energy, Paving the Way for a Brighter and Greener Tomorrow.",
+      "Din 2014 proiectăm, instalăm și întreținem sisteme fotovoltaice și instalații electrice respectând standardele ANRE & ISO.",
   },
   services: [
     {
-      title: "Solar Power Solutions",
+      title: "Sisteme fotovoltaice rezidențiale și industriale",
       briefDescription:
-        "Harness the power of the sun with our state-of-the-art solar panels. Generate clean energy for your home or business and reduce your carbon footprint.",
+        "Proiectare, execuție, racordare și mentenanță pentru instalații de la câțiva kW până la parcuri de zeci de MW.",
       visual: img1,
     },
     {
-      title: "Wind Energy Harvesting",
+      title: "Consultanță de finanțare (Casa Verde, Electric Up)",
       briefDescription:
-        "Embrace the power of the wind. Our wind energy solutions provide a sustainable and efficient way to generate electricity, ensuring a greener future.",
+        "Pregătirea dosarului, depunere, relația cu autoritățile și raportări pe toată durata programului.",
       visual: img2,
     },
     {
-      title: "Hydropower Systems",
+      title: "Instalații electrice - civile și industriale",
       briefDescription:
-        "Flow with nature. Our hydropower systems harness the energy of flowing water, delivering reliable and eco-friendly electricity to your doorstep.",
+        "De la instalații interioare pentru clădiri până la alimentarea și iluminatul exterior al spațiilor publice sau de producție.",
       visual: img3,
     },
     {
-      title: "Energy Storage Solutions",
+      title: "Automatizări și integrare sisteme smart",
       briefDescription:
-        "Store excess energy efficiently. Our cutting-edge energy storage solutions ensure uninterrupted power supply, even during cloudy days or low-wind periods.",
-      visual: img4,
-    },
-    {
-      title: "Smart Grid Technology",
-      briefDescription:
-        "Navigate the future with our smart grid technology. Optimize energy distribution, monitor consumption, and contribute to a more sustainable and efficient energy ecosystem.",
-      visual: img5,
-    },
-    {
-      title: "Energy-efficient Lighting",
-      briefDescription:
-        "Illuminate your space responsibly. Our energy-efficient lighting solutions provide bright, sustainable, and cost-effective illumination for homes and businesses.",
+        "Obținerea avizelor, executarea lucrărilor și emiterea Certificatului de Racordare pentru consumatori sau prosumatori.",
       visual: img6,
+    },
+    {
+      title: "Branșamente electrice de joasă tensiune si racordare la rețea",
+      briefDescription:
+        "Proiectare și implementare de soluții SCADA/PLC, optimizare proces și monitorizare energetică.",
+      visual: img4
+    },
+    {
+      title: "Service, mentenanță și upgrade capacități existente",
+      briefDescription:
+        "Inspecții periodice, reparații echipamente electrice/electronice și extinderea sistemelor fotovoltaice deja instalate.",
+      visual: img5,
     },
   ],
   callToAction:
