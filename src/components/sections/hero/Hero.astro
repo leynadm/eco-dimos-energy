@@ -1,6 +1,6 @@
 ---
 import { Image, Picture } from "astro:assets";
-import heroImg from "./assets/wind3.jpg";
+import heroImg from "./assets/wind3.webp";
 import CtaButton from "../../shared/CtaButton.astro";
 import GradiantText from "../../shared/GradiantText.astro";
 import SubTitle from "../../shared/SubTitle.astro";
@@ -26,7 +26,7 @@ export interface Props {
 const { className = "" } = Astro.props;
 ---
 
-<section class=`relative  ${className} w-full h-[80vh]` id="hero">
+<section class=`relative  ${className} w-full h-full min:h-[80vh]` id="hero">
   <div class="w-full  pt-[100px]">
     <div
       class="w-full h-full grid grid-cols-1 md:grid-cols-2 justify-end bg-base-100 dark:bg-base-dark-900"
