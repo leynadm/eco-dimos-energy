@@ -1,0 +1,187 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/shared/Container.astro";
+import Title from "../components/shared/Title.astro";
+import SubTitle from "../components/shared/SubTitle.astro";
+import GradiantText from "../components/shared/GradiantText.astro";
+import Title2 from "../components/shared/Title2.astro";
+import Title3 from "../components/shared/Title3.astro";
+import Paragraph from "../components/shared/Paragraph.astro";
+import LazyImage from "../components/shared/LazyImage.astro";
+import CtaButton from "../components/shared/CtaButton.astro";
+import CertificationBadge from "../components/shared/CertificationBadge.astro";
+import trustImage from "../assets/images/placeholder-trust.jpg"; // New image for the trust section
+
+// Data for the redesigned sections
+const certifications = [
+    { name: "Autorizat A.N.R.E." },
+    { name: "Certificat ISO 9001" },
+    { name: "Certificat ISO 14001" },
+    { name: "Certificat ISO 45001" },
+];
+
+// TODO: Replace with an actual image of your team or office
+import teamImage from "../assets/images/placeholder-team-working.jpg"
+import heroFullWidthImage from "../assets/images/about-us-image.jpg"
+const promisePoints = [
+    { 
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>`,
+        title: "Rapid", 
+        description: "Respectăm termenele de livrare și comunicăm proactiv pentru a evita orice întârziere." 
+    },
+    { 
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`,
+        title: "Clar", 
+        description: "Oferim soluții clare și explicații pe înțelesul tuturor, fără jargon tehnic inutil." 
+    },
+    { 
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>`,
+        title: "Transparent", 
+        description: "Procesele noastre sunt deschise, de la ofertare până la implementarea finală." 
+    },
+];
+---
+
+<Layout
+  title="Despre Noi"
+  description="Punem curent in ideile bune. Suntem o companie romaneasca specializata in instalatii electrice, automatizari industriale si sisteme de energie regenerabila."
+>
+<div class="w-full  pt-[100px]">
+
+
+<main class="flex flex-col gap-y-20 md:gap-y-40 overflow-hidden">
+
+<section class="relative w-full h-[60vh] min-h-[450px] flex items-center justify-center text-center text-white">
+  <!-- Background Image -->
+  <LazyImage
+    src={heroFullWidthImage}
+    alt="Instalatie de panouri fotovoltaice"
+    class="absolute inset-0 w-full h-full object-cover -z-10"
+  />
+  <!-- Dark Overlay for Readability -->
+  <div class="absolute inset-0 bg-slate-900/60 -z-10"></div>
+
+  <!-- Content -->
+  <Container>
+    <Title className="!text-white !text-5xl md:!text-7xl">
+      Punem curent
+      <br /> în ideile bune
+    </Title>
+    <SubTitle className="mt-6 max-w-3xl mx-auto !text-lg md:!text-xl !text-slate-200">
+      Suntem o companie românească specializată în instalații electrice, automatizări industriale și sisteme de energie regenerabilă – și o facem cu pasiune, grijă și o viziune clară.
+    </SubTitle>
+  </Container>
+</section>
+
+  <!-- ============================================ -->
+  <!-- 2. WHO WE ARE: The Team & Ethos -->
+  <!-- ============================================ -->
+  <section class="py-16 md:py-24 bg-base-100 dark:bg-base-dark-900">
+    <Container>
+      <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <!-- Text Column -->
+        <div class="order-2 md:order-1">
+          <Title2>Ce ne definește?</Title2>
+          <Paragraph className="mt-6">
+            În primul rând, o echipă tânără, motivată și (ne place să credem)
+            simpatică, care nu fuge de provocări, ci le întâmpină cu idei
+            proaspete, șurubelnița la îndemână și cafeaua în mână. Suntem genul
+            de oameni care nu doar respectă termenul de livrare, ci chiar îl
+            sună înainte să întârzie.
+          </Paragraph>
+          <Paragraph className="mt-4">
+            Lucrăm cu entuziasm pe proiecte mici și mari – de la locuințe
+            inteligente până la hale industriale care funcționează ca un ceas
+            elvețian (pe curent românesc, evident). Fiecare client e important
+            pentru noi, pentru că știm că încrederea se câștigă prin fapte, nu
+            prin vorbe frumoase. Deși... ne descurcăm și cu alea.
+          </Paragraph>
+        </div>
+
+        <!-- Image Column -->
+        <div class="order-1 md:order-2">
+          <LazyImage
+            src={teamImage}
+            alt="Echipa Eco Dimos Energy la lucru"
+            class="rounded-2xl shadow-xl object-cover w-full h-auto max-h-[500px]"
+            width="600"
+            height="700"
+          />
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 3. TRUST & CERTIFICATIONS -->
+  <!-- ============================================ -->
+    <section>
+      <Container>
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Image Column -->
+          <div class="w-full h-full">
+            <LazyImage src={trustImage} alt="Demonstratie de incredere si profesionalism" class="rounded-2xl shadow-lg w-full h-auto object-cover" width="500" height="400" />
+          </div>
+          <!-- Text and Badges Column -->
+          <div class="flex flex-col justify-center">
+            <Title2>Seriozitatea noastră este garantată</Title2>
+            <Paragraph className="mt-6">
+              Nu doar promitem calitate, o și demonstrăm prin fapte, cu autorizații și certificări recunoscute la nivel național și internațional, care atestă angajamentul nostru pentru excelență.
+            </Paragraph>
+            <div class="grid grid-cols-2 gap-4 mt-8">
+              {certifications.map(cert => <CertificationBadge name={cert.name} />)}
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
+
+  <!-- ========================================================== -->
+    <!-- 4. OUR PROMISE: The No-Nonsense Approach (REDESIGNED with icons) -->
+    <!-- ========================================================== -->
+    <section class="bg-base-100 dark:bg-base-dark-900 py-16 md:py-24">
+      <Container>
+        <div class="max-w-3xl mx-auto text-center">
+            <Title3>Fără bătăi de cap. Asta e promisiunea.</Title3>
+            <Paragraph className="mt-4 text-lg">
+                Cu noi, lucrurile se mișcă. Fără „lasă că vedem” sau „revin eu cu un telefon”.
+            </Paragraph>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+          {promisePoints.map(point => (
+            <div class="flex flex-col items-center text-center p-6 bg-base-50 dark:bg-base-dark-800 rounded-xl shadow-md transition hover:shadow-xl hover:-translate-y-1">
+              <div class="text-primary dark:text-primary-400 mb-4" set:html={point.icon} />
+              <Title3 className="!mb-2">{point.title}</Title3>
+              <Paragraph className="text-sm">{point.description}</Paragraph>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
+
+  <!-- ============================================ -->
+  <!-- 5. FINAL CTA -->
+  <!-- ============================================ -->
+  <section class="py-20 md:py-28 text-center">
+    <Container>
+      <SubTitle className="!font-extrabold !text-2xl md:!text-4xl">
+        Sunteți gata să vă conectați la viitor?
+      </SubTitle>
+      <Paragraph className="mt-4 mb-8 max-w-2xl mx-auto">
+        Dacă sunteți în căutarea unui partener de încredere care să transforme
+        un proiect tehnic într-un succes clar și sustenabil, tocmai l-ați
+        găsit.
+      </Paragraph>
+      <a href="#">
+        <CtaButton>Hai să stăm de vorbă</CtaButton>
+      </a>
+      <Paragraph className="mt-4 font-semibold">
+        Suntem ECO DIMOS ENERGY – și suntem conectați la viitor. La propriu.
+      </Paragraph>
+    </Container>
+  </section>
+  </main>
+</div>
+
+
+</Layout>

@@ -1,0 +1,13 @@
+---
+export interface Props {
+  name: string;
+  className?: string;
+}
+const { name, className = "" } = Astro.props;
+---
+
+<div
+  class={`border border-primary/50 dark:border-primary-400/40 bg-base-100 dark:bg-base-dark-800 rounded-lg py-2 px-4 text-center transition-all duration-300 hover:shadow-lg hover:border-primary ${className}`}
+>
+  <p class="font-semibold text-accent dark:text-accent-light tracking-wide">{name}</p>
+</div>
