@@ -25,9 +25,8 @@ export interface Props {
 
 const { className = "" } = Astro.props;
 ---
-
-<section class=`relative  ${className} w-full h-full min:h-[80vh]` id="hero">
-  <div class="w-full  pt-[100px]">
+<section class=`relative  ${className} w-full h-[80vh]` id="hero">
+  <div class="w-full h-[80vh] pt-[100px]">
     <div
       class="w-full h-full grid grid-cols-1 md:grid-cols-2 justify-end bg-base-100 dark:bg-base-dark-900"
     >
@@ -43,7 +42,7 @@ const { className = "" } = Astro.props;
         <SubTitle className=" mt-10 leading-9 italic">
           {heroSection.subheading1}
           <br />
-          <span class=" font-semibold">{heroSection.subheading2}</span><br />
+          {heroSection.subheading2}<br />
           {heroSection.subheading3}
         </SubTitle>
         <div class="pt-10">
