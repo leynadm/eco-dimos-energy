@@ -1,0 +1,184 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/shared/Container.astro";
+import Title from "../components/shared/Title.astro";
+import SubTitle from "../components/shared/SubTitle.astro";
+import Title2 from "../components/shared/Title2.astro";
+import Paragraph from "../components/shared/Paragraph.astro";
+import LazyImage from "../components/shared/LazyImage.astro";
+import GradiantText from "../components/shared/GradiantText.astro";
+
+// --- ASSETS ---
+// TODO: Replace with a real image of your team/office
+import contactImage from "../assets/images/contact-support.jpg";
+
+// --- PAGE DATA ---
+const contactDetails = [
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`,
+    title: "Sună-ne direct",
+    value: "+40 123 456 789",
+    href: "tel:+40123456789",
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>`,
+    title: "Trimite-ne un email",
+    value: "office@ecodimos.ro",
+    href: "mailto:office@ecodimos.ro",
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>`,
+    title: "Vino la o cafea",
+    value: "Bulevardul Eroilor 42, Orăștie, România",
+    href: "#map-location",
+  },
+];
+---
+
+<Layout
+  title="Contact"
+>
+<div class="w-full  pt-[100px]">
+
+<main class="flex flex-col gap-y-20 md:gap-y-32 overflow-hidden">
+
+    <!-- ============================================ -->
+    <!-- 1. HERO SECTION -->
+    <!-- ============================================ -->
+    <section class="pt-24 md:pt-32 text-center">
+      <Container>
+        <Title>
+          Hai să stăm <GradiantText>de vorbă</GradiantText>
+        </Title>
+        <SubTitle className="mt-6 max-w-2xl mx-auto !text-lg md:!text-xl">
+          Fie că ai o întrebare, o idee de proiect sau dorești o ofertă personalizată, echipa noastră este gata să te ajute. Completează formularul de mai jos sau folosește una dintre metodele de contact direct.
+        </SubTitle>
+      </Container>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 2. CONTACT DETAILS SECTION -->
+    <!-- ============================================ -->
+    <section>
+      <Container>
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
+          <!-- Left Column: Text -->
+          <div class="flex flex-col justify-center">
+            <Title2>Contact Direct</Title2>
+            <Paragraph className="mt-4">
+              Preferi să vorbești direct cu cineva? Alege metoda preferată. Suntem disponibili pentru a-ți răspunde la întrebări și a discuta cum putem colabora.
+            </Paragraph>
+            <Paragraph className="mt-4 border-l-4 border-primary pl-4 text-slate-600 dark:text-slate-300">
+                <strong>Program de lucru:</strong><br/>
+                Luni - Vineri: 09:00 - 18:00
+            </Paragraph>
+          </div>
+          <!-- Right Column: Details -->
+          <div class="flex flex-col gap-6">
+            {contactDetails.map(detail => (
+              <a href={detail.href} class="flex items-start gap-4 p-4 rounded-lg bg-base-100 dark:bg-base-dark-800 hover:bg-base-200 dark:hover:bg-base-dark-700 transition-colors">
+                <div class="flex-shrink-0 text-primary dark:text-primary-400 mt-1" set:html={detail.icon} />
+                <div>
+                  <h3 class="font-bold text-lg text-accent dark:text-accent-light">{detail.title}</h3>
+                  <p class="text-slate-600 dark:text-slate-400">{detail.value}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </Container>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 3. CONTACT FORM SECTION -->
+    <!-- ============================================ -->
+    <section class="bg-base-100 dark:bg-base-dark-900 py-16 md:py-24">
+      <Container>
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <!-- Left Column: Form -->
+            <div>
+                <Title2>Trimite-ne un mesaj</Title2>
+                <!-- 
+                  TODO: Update the form action to your form handling service (e.g., Netlify, Formspree, etc.)
+                  The `netlify` attribute is for Netlify forms. Remove it if you use another service.
+                -->
+                <form action="/form-success" name="contact" method="POST" netlify class="mt-8 space-y-6">
+                    <div>
+                        <label for="name" class="form-label">Nume complet</label>
+                        <input type="text" name="name" id="name" required class="form-input" />
+                    </div>
+                    <div>
+                        <label for="email" class="form-label">Adresă de email</label>
+                        <input type="email" name="email" id="email" required class="form-input" />
+                    </div>
+                    <div>
+                        <label for="phone" class="form-label">Număr de telefon (Opțional)</label>
+                        <input type="tel" name="phone" id="phone" class="form-input" />
+                    </div>
+                    <div>
+                        <label for="service" class="form-label">Serviciul de interes</label>
+                        <select name="service" id="service" class="form-select">
+                            <option>Consultanță Energetică</option>
+                            <option>Panouri Fotovoltaice</option>
+                            <option>Automatizări Industriale</option>
+                            <option>Mentenanță și Service</option>
+                            <option>Altceva</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="form-label">Mesajul tău</label>
+                        <textarea name="message" id="message" rows="5" required class="form-input"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
+                            Trimite Mesajul
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+      </Container>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 4. MAP LOCATION SECTION -->
+    <!-- ============================================ -->
+    <section id="map-location">
+        <Container>
+            <Title2 className="text-center">Unde ne găsești</Title2>
+            <div class="mt-8 w-full h-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-base-100 dark:border-base-dark-800">
+                <!-- TODO: Replace this iframe src with your actual Google Maps embed link -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.831034485542!2d26.09930491544039!3d44.43618697910207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff4f7de5b94f%3A0x863486f0aj4f36a9!2sPiata%20Unirii%2C%20Bucure%C8%99ti!5e0!3m2!1sro!2sro!4v1678886400000" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </Container>
+    </section>
+  </main>
+  </div>  
+</Layout>
+
+<!-- Add this to style your form elements globally or in a custom.css file -->
+<style is:global>
+    .form-label {
+        @apply block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1;
+    }
+    .form-input, .form-select, .form-textarea {
+        @apply w-full px-4 py-2 bg-base-100 dark:bg-base-dark-800 border border-slate-300 dark:border-slate-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition;
+    }
+    .form-select {
+        @apply appearance-none;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+        background-position: right 0.5rem center;
+        background-repeat: no-repeat;
+        background-size: 1.5em 1.5em;
+        padding-right: 2.5rem;
+    }
+</style>
